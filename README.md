@@ -2,7 +2,7 @@
 
 I used to use Twitter as a news reader. It offered a great user experience as it made it easy to discuss news with friends. Now, I want to introduce this user experience in Bluesky.
 
-This note outlines the implementation of Bluesky bots (@bbcnews-uk-rss.bsky.social, @bbcnews-world-rss.bsky.social) designed to repost RSS feeds of BBC News. I wish you readers implement bots with your favourite news sources.
+This repository provides the implementation of Bluesky bots (@bbcnews-uk-rss.bsky.social and @bbcnews-world-rss.bsky.social) designed to repost RSS feeds of BBC News. I wish you readers implement bots with your favourite news sources.
 
 # Implementation
 
