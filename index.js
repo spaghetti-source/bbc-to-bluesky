@@ -6,6 +6,7 @@ const sharp = require("sharp");
 const Parser = require("rss-parser");
 const parser = new Parser();
 
+
 const settings = [
   {
     account: "bbcnews-uk-rss.bsky.social",
@@ -16,6 +17,11 @@ const settings = [
     account: "bbcnews-world-rss.bsky.social",
     password: "xxxx-xxxx-xxxx-xxxx",
     url: "https://feeds.bbci.co.uk/news/world/rss.xml#",
+  },
+  {
+    account: "apnews-world-rss.bsky.social",
+    password: "xxxx-xxxx-xxxx-xxxx",
+    url: "https://rsshub.app/apnews/topics/world-news",
   },
 ];
 
