@@ -111,17 +111,26 @@ async function main(setting) {
     });
     cursor = response.cursor;
     for (const feed of response.data.feed) {
+      processed.add(feed.post.record.embed.external.uri);
       processed.add(feed.post.record.text);
     }
   }
   for (const feed of await get_feeds(setting.url)) {
-    if (!processed.has(feed.title)) {
+    if (!processed.has(feed.title) && !processed.has(feed.link)) {
       await post(agent, feed);
     } else {
       console.log("skipped " + feed.title);
     }
   }
 }
+// async function entrypoint() {
+//   for (const setting of settings) {
+//     console.log("process " + setting.url);
+//     await main(setting);
+//   }
+//   console.log("--- finish ---");
+// }
+// entrypoint();
 functions.cloudEvent("entrypoint", async (_) => {
   for (const setting of settings) {
     console.log("process " + setting.url);
